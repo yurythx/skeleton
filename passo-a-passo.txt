@@ -52,6 +52,28 @@ Django
 
         -- pip install Django
 
+    Criando o projeto com Django
+
+        -- django-admin startproject blog_base .
+
+    Rodando o servidor
+
+        -- python manage.py runserver
+
+    comando pra gerar secret ket
+
+        -- python -c "import string as s;from secrets import SystemRandom as SR;print(''.join(SR().choices(s.ascii_letters + s.digits + s.punctuation, k=64)));"
+
+    criando super user
+
+        -- python manage.py createsuperuser
+
+        -- python manage.py migrate
+
+        -- python manage.py makemigrations
+
+        -- python manage.py startapp blog
+
 
 GIT
 
@@ -82,17 +104,18 @@ GIT
             Adicionar todos os arquivos/diretórios
                 git add .
 
-            Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)
-                git add -f arquivo_no_gitignore.txt
-
             Comitar um arquivo
-                git commit meu_arquivo.txt
+                git commit -m "minha mensagem de commit"
 
             Comitar vários arquivos
                 git commit meu_arquivo.txt meu_outro_arquivo.txt
 
             Comitar informando mensagem
                 git commit meuarquivo.txt -m "minha mensagem de commit"
+
+            git push <nome do repositório> <nome da branch>
+            git push origin master
+            git push --all
 
             Remover arquivo
                 git rm meu_arquivo.txt
